@@ -63,7 +63,7 @@ public class TestCase implements Serializable {
     private ExecutionStatus executionStatus;
     private Platform platform;
     private Integer featureId;
-
+    private List<String> keywords;
     /**
 	 * 
 	 */
@@ -455,6 +455,20 @@ public class TestCase implements Serializable {
     public void setFeatureId(Integer featureId) {
         this.featureId = featureId;
     }
+    
+	/**
+	 * @return
+	 */
+	public List<String> getKeywords() {
+		return keywords;
+	}
+
+	/**
+	 * @param keywords
+	 */
+	public void setKeywords(List<String> keywords) {
+		this.keywords = keywords;
+	}
 
     /*
      * (non-Javadoc)
@@ -470,7 +484,9 @@ public class TestCase implements Serializable {
                 + internalId + ", fullExternalId=" + fullExternalId + ", checkDuplicatedName=" + checkDuplicatedName
                 + ", actionOnDuplicatedName=" + actionOnDuplicatedName + ", versionId=" + versionId + ", version="
                 + version + ", parentId=" + parentId + ", customFields=" + customFields + ", executionStatus="
-                + executionStatus + ", platform=" + platform + ", featureId=" + featureId + "]";
+                + executionStatus + ", platform=" + platform + ", featureId=" + featureId + ", keywords= "+keywords+"]";
     }
+
+
 
 }

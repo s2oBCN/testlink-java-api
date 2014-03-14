@@ -952,6 +952,18 @@ public class TestLinkAPI {
     }
 
     /**
+     *  Gets list of keywords for a given Test case
+     *  
+     * @param testProjectId
+     * @param testCaseId
+     * @return
+     * @throws TestLinkAPIException
+     */
+    public List<String> getTestCaseKeywords(Integer testProjectId, Integer testCaseId) throws TestLinkAPIException {
+		return this.testCaseService.getTestCaseKeywords(testProjectId, testCaseId);
+	}
+    
+    /**
      * Retrieves list of Custom Fields for a Test Case.
      * 
      * @param testCaseId
